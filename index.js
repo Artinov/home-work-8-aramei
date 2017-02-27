@@ -10,6 +10,15 @@ function setTextAll(selector, text) {
 	}
 }
 
+function setTextAllForEach(selector, text) {
+	var x = document.querySelectorAll(selector)
+	var element = x[i];
+	x.forEach(function(element) {
+		element.innerHTML = text;
+	})
+}
+
 
 setText("p", "wasn't that hard, yeah ?");
 setTextAll("div .block a", "or was it ?");
+setTextAllForEach("div .block a", "rewrited on forEach");
